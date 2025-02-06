@@ -1,0 +1,296 @@
+* {
+    transition: transform 0.5s ease;
+}
+
+
+main .Items-Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; /* Adds spacing between the boxes */
+    padding: 20px;
+}
+
+.Information-Box {
+    color: #eee;
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    border: 3px #333 solid;
+    border-radius: 10px;
+}
+
+.Information-Box:hover, .Project-Box:hover,.Contact-Box:hover {
+    transform: scale(1.01);
+}
+
+.Information-content {
+    text-align: left;
+}
+
+
+footer {
+    position: absolute;
+    border-top: 3px solid #333;
+    color: #eee;
+    text-align: center;
+    min-width: 650px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.Container img{
+    margin: 0px;
+    width: 100%;
+    height: auto;
+    border-radius: 1px;
+}
+
+.Container img:hover {
+    transform: scale(1.03);
+}
+
+.Project-Box {
+    padding: 20px;
+    color: #eee;
+    width: 80%;
+    max-width: 600px;
+    border: 3px #333 solid;
+    border-radius: 10px;
+}
+
+.Contact-Box {
+    color: #eee;
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    border: 3px #333 solid;
+    border-radius: 10px;
+}
+
+
+#MyProjects img{
+    float: inline-end;
+    width: 4%;
+    height: auto;
+}
+
+#MyProjects a {
+    color: #eee;
+    text-decoration: none;
+}
+
+#ContactMe a:hover {
+    color: orangered;
+}
+
+#ContactMe {
+    text-align: center;
+}
+
+#ContactMe a {
+    color: #eee;
+    text-decoration: none;
+}
+
+#MyProjects, #Name, #Knowledge {
+    color: #eee;
+    padding-bottom: 3px;
+    border-bottom: 3px #eee solid;
+
+}
+
+#More {
+    float: right;
+    color: #eee;
+    text-decoration: none;
+}
+
+#More:hover {
+    color: orangered;
+    transform: scale(1.05);
+}
+
+#GithubIcon {
+    width: 5%;
+    height: auto;
+    float: left;
+}
+
+#GithubIcon2 {
+    width: 800px;
+    height: auto;   
+    right: 0px;
+}
+
+#Linkedin {
+    width: 5%;
+    height: auto;
+    float: right;
+}
+
+/* horizontal nav bar */
+@media screen and (min-width: 850px) {
+
+    body {
+        background-color: #111;
+        margin: 0;
+        padding: 0;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+    
+    .HomeBtn {
+        text-decoration: none;
+        color: white;
+        font-size: 25px;
+        padding-left: 10px;
+    }
+    
+    .HomeBtn:hover {
+        color: orangered;
+        transform: scale(1.05);
+    }
+    
+    .Main-Nav {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        flex-grow: 1;
+        padding-left: 70px;
+    }
+    
+    .Main-Nav li {
+        margin: 0 10px;
+    }
+    
+    .Main-Nav li a {
+        font-size: 25px;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    
+    .Main-Nav li a:hover {
+        color: orangered;
+        transform: scale(1.05);
+    }
+    
+    /* languange btn */
+    .Nav-Lang {
+        list-style-type: none;
+        margin: 0;
+        padding-right: 10px;
+    }
+    
+    .Languange {
+        font-size: 25px;
+        text-decoration: none;
+        color: white;
+        padding: 14px 16px;
+        display: block;
+    }
+    
+    
+    .Languange:hover {
+        color: orangered;
+        transform: scale(1.05);
+    }
+  }
+  
+/* vertical nav bar */
+@media screen and (max-width: 850px) {
+
+    body {
+        background-color: #111;
+        margin: 0;
+        padding: 0;
+        font-family: 'Times New Roman', Times, serif;
+        overflow-x: hidden;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
+    }
+        
+    .HomeBtn {
+        text-decoration: none;
+        color: white;
+        font-size: 25px;
+        padding-left: 10px;
+    }
+        
+    .HomeBtn:hover {
+        color: orangered;
+        transform: scale(1.05);
+    }
+        
+    .Main-Nav {
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        flex-grow: 1;
+    }
+        
+    .Main-Nav li {
+        margin: 0 10px;
+    }
+        
+    .Main-Nav li a {
+        font-size: 25px;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+        
+    .Main-Nav li a:hover {
+        color: orangered;
+        transform: scale(1.05);
+    }
+        
+    /* Centering the language button */
+    .Nav-Lang {
+        list-style-type: none;
+        margin: 0px 0; /* Add spacing */
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        width: 100%; /* Ensures it's centered */
+    }
+
+    .Languange {
+        font-size: 25px;
+        text-decoration: none;
+        color: white;
+        padding: 14px 16px;
+        display: block;
+        text-align: center;
+    }
+
+    .Languange:hover {
+        color: orangered;
+        transform: scale(1.05);
+    }
+}
+
+
+

@@ -1,0 +1,7 @@
+* {
+    transition: transform 0.5s ease;
+}
+
+footer p:hover {
+    transform: translateX(42px);
+}
