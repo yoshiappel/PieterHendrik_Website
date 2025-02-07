@@ -28,17 +28,6 @@ main .Items-Container {
     text-align: left;
 }
 
-
-footer {
-    position: absolute;
-    border-top: 3px solid #333;
-    color: #eee;
-    text-align: center;
-    min-width: 650px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
 .Container img{
     margin: 0px;
     width: 100%;
@@ -206,6 +195,16 @@ footer {
         color: orangered;
         transform: scale(1.05);
     }
+
+    footer {
+        position: absolute;
+        border-top: 3px solid #333;
+        color: #eee;
+        text-align: center;
+        min-width: 650px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
   }
   
 /* vertical nav bar */
@@ -289,6 +288,20 @@ footer {
     .Languange:hover {
         color: orangered;
         transform: scale(1.05);
+    }
+
+    footer {
+        position: absolute;
+        border-top: 3px solid #333;
+        color: #eee;
+        text-align: center;
+        min-width: 300px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #More {
+        display: none;
     }
 }
 
