@@ -1,20 +1,14 @@
 {
-  "name": "pieterhendrik_website",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "pieterhwebsite",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yoshiappel/PieterHendrik_Website.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/yoshiappel/PieterHendrik_Website/issues"
-  },
-  "homepage": "https://github.com/yoshiappel/PieterHendrik_Website#readme"
+  "devDependencies": {
+    "vite": "^7.1.0"
+  }
 }
