@@ -1,3 +1,5 @@
+const API_KEY = import.meta.env.VITE_API_KEY;
+
 const output = document.getElementById('weather-output');
 
 function fetchWeather(lat, lon) {
