@@ -1,5 +1,6 @@
 const API_KEY = import.meta.env.VITE_API_KEY;
 
+const container = document.querySelector('body');
 const output = document.getElementById('weather-output');
 
 function fetchWeather(lat, lon) {
@@ -20,6 +21,11 @@ fetch(url)
             <p>> WIND SPEED: ${wind} m/s</p>
             <p>> ADVICE: ${generateAdvice(temp, summary)}</p>
         `;
+        if (summary.toLowerCase().includes('rain')) {
+            startRain();
+        } else {
+            stopRain();
+        }
     })
     .catch(err => {
         output.innerHTML = `<p class="error">ERROR: Failed to connect to orbital weather satellite.</p>`;
@@ -52,3 +58,46 @@ function initWeather() {
 }
 
 window.addEventListener('DOMContentLoaded', initWeather);
+
+function rainEffect() {
+    let rainDrops = document.createElement('span');
+    rainDrops.classList.add('rain-drops');
+    container.appendChild(rainDrops);
+    rainDrops.style.left = Math.random() * 100 + '%';
+
+    setTimeout(function rainEffect(){
+        rainDrops.remove();
+    }, 1500);
+}
+
+let rainInterval = null;
+
+function startRain() {
+    if (rainInterval) return;
+
+    rainInterval = setInterval(rainEffect, 15);
+}
+
+function stopRain() {
+    clearInterval(rainInterval);
+    rainInterval = null;
+
+    document.querySelectorAll('.rain-drops').forEach(drop => {
+        drop.style.opacity = '0';
+        setTimeout(() => drop.remove(), 500);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const rainToggle = document.getElementById('rain-toggle');
+
+    if (rainToggle) {
+        rainToggle.addEventListener('change', (e) => {
+            if (e.target.checked) {
+                startRain();
+            } else {
+                stopRain();
+            }
+        });
+    }
+});

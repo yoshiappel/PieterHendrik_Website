@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="CSS/main.css">
     <link rel="stylesheet" href="CSS/TopBtn.css">
     <link rel="stylesheet" href="CSS/goofytext.css">
+    <link rel="stylesheet" href="CSS/rain.css">
     <meta name="description" content="Pieter Hendrik Portfolio Website">
     <meta name="keywords" content="Aboutme, MyProjects">
     <meta name="author" content="Piet Hendrik Boterhoek">
@@ -37,6 +38,11 @@
             <section id="weather-section" class="weather-terminal-container">
                 <div class="weather-terminal-header">
                     <span class="weather-terminal-title">[WEATHER_TERMINAL]</span>
+                    <span>|RAIN?|</span>
+                    <label class="switch">
+                        <input id="rain-toggle" type="checkbox" autocomplete="off">
+                        <span class="slider"></span>
+                    </label>
                 </div>
                 <div id="weather-output" class="weather-terminal-body">
                     <p class="loading">Decrypting sattelite feed...</p>
@@ -117,10 +123,8 @@
     </main>
 
     <footer>
-        <p>© 2025 Pieter Hendrik Boterhoek</p><p>Friesland, The Netherlands </p>
+        <p>Developed by Pieter Hendrik Boterhoek ©2025</p><p>Inspired by Cyberpunk 2077</p>
     </footer>
-
-    
 
     <button onclick="backToTop()" id="topButton" title="Go To Top"> <i class="fa-solid fa-arrow-up fa-2x"></i></button>
 
