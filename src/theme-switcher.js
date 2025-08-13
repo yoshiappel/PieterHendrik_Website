@@ -14,14 +14,14 @@ function getCurrentTheme() {
 function toggleTheme() {
   const currentTheme = getCurrentTheme(); // first get the current theme to avoid loading the same theme again
   const nextTheme = currentTheme === 'cyberpunkyellow' ? 'cyberpunkred' : 'cyberpunkyellow'; // if the currenTheme is "cyberpunkyellow" switch to "cyberpunkred"
-  themeLink.setAttribute('href', `CSS/themes/${nextTheme}.css`) // now set the href to the right css script
+  themeLink.setAttribute('href', `/CSS/themes/${nextTheme}.css`) // now set the href to the right css script
   localStorage.setItem('theme', nextTheme) // save this preference in localstorage
 }
 
 // load the saved preference if it exist on page load
 document.addEventListener('DOMContentLoaded', () => {
   const saved = localStorage.getItem('theme') || 'cyberpunkred';
-  themeLink.setAttribute('href', `CSS/themes/${saved}.css`);
+  themeLink.setAttribute('href', `/CSS/themes/${saved}.css`);
 });
 
 // if the user click on the <a>
