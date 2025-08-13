@@ -3,6 +3,7 @@ const API_KEY = import.meta.env.VITE_API_KEY;
 const container = document.querySelector('body');
 const output = document.getElementById('weather-output');
 
+// use the api to get weather info
 function fetchWeather(lat, lon) {
     const url = `https://api.pirateweather.net/forecast/${API_KEY}/${lat},${lon}?units=si`;
 
@@ -88,6 +89,7 @@ function stopRain() {
     });
 }
 
+// rain toggle for rain effect even when its not raining irl
 document.addEventListener('DOMContentLoaded', () => {
     const rainToggle = document.getElementById('rain-toggle');
 

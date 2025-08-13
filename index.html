@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/main.css">
-    <link rel="stylesheet" href="CSS/TopBtn.css">
+    <link id="theme-style" rel="stylesheet" href="CSS/themes/cyberpunkred.css">
     <link rel="stylesheet" href="CSS/goofytext.css">
     <link rel="stylesheet" href="CSS/rain.css">
     <meta name="description" content="Pieter Hendrik Portfolio Website">
@@ -26,19 +25,18 @@
                 <li><a href="#aboutme" class="nav-link">About Me</a></li>
                 <li><a href="#myprojects" class="nav-link">My Projects</a></li>
             </ul>
-
         </nav>
     </header>
     <main>
         <div class="Items-Container">
-            <div id="Name">
+            <div class="Name">
                 <h2>Hey, I'm Pieter!</h2>
                 <h2>A third year student studying Software Development At Firda</h2>
             </div>
             <section id="weather-section" class="weather-terminal-container">
                 <div class="weather-terminal-header">
                     <span class="weather-terminal-title">[WEATHER_TERMINAL]</span>
-                    <span>|RAIN?|</span>
+                    <span>[RAIN?]</span>
                     <label class="switch">
                         <input id="rain-toggle" type="checkbox" autocomplete="off">
                         <span class="slider"></span>
@@ -49,24 +47,23 @@
                 </div>
             </section>
             <section id="aboutme" class="about-me-container">
-                <div id="SomeText">
+                <div class="SomeText">
                     <h3>About Me <br></h3>
                     <h4>
-                        ID: B0ScPH2007<br>
-                        NAME: PIETER HENDRIK <br>
+                        NAME: PIETER HENDRIK <br>                        
                         FUNCTION: STUDENT <br>
                         COORDINATES: LEEUWARDEN, NL <br>
                         PROJECT: LEARNING MORE UNITY C# <br>
                         SIDE QUESTS: PLAYING GUITAR/GAMES
                     </h4>
                     <h5>Feel free to connect with me</h5>
-                    <a href="https://github.com/yoshiappel"><i class="fa-brands fa-github"></i></a>
-                    <a href="mailto:371537@student.firda.nl"><i class="fa-solid fa-envelope"></i></a>
-                    <a href="https://www.linkedin.com/in/pieter-hendrik-boterhoek-651886347/"><i class="fa-brands fa-linkedin"></i></a>
+                    <i class="socials fa-brands fa-github"><a href="https://github.com/yoshiappel"></a></i>
+                    <i class="socials fa-solid fa-envelope"><a href="mailto:371537@student.firda.nl"></a></i>
+                    <i class="socials fa-brands fa-linkedin"><a href="https://www.linkedin.com/in/pieter-hendrik-boterhoek-651886347/"></a></i>
                 </div>
             </section>
             <section class="toolslanguages-container">
-                <div id="SomeText">
+                <div class="SomeText">
                     <h3>Tools & Languages</h3>
                 </div>
                 <div class="tools-carousell">
@@ -95,26 +92,32 @@
                     </div>
                 </div>
             </section>
-            <section id="myprojects" class="projects-container">
-                <div id="SomeText">
-                    <h3>My Projects</h3>
+            <section id="myprojects" class="Projects-Container">
+                <div class="SomeText">
+                    <h3> My Projects </h3>
                 </div>
-                <div class="Project-Box">
+                <div class="Project-Box" style="background-image: url(/img/Project.gif);">
                     <div class="Project-Info">
-                        <div id="Project-Text">
-                            <h2>Sonic Fishing Minigame <br> <h3>A recreation of the Fishing Minigame inside Sonic Frontiers</h3></h2>
-                            <img id="icons" src="icons/unity.png" alt="unity" />
-                            <img id="icons" src="icons/csharp.png" alt="Csharp"/>
-                            <a id="More" href="https://github.com/yoshiappel/Unity_Sonic_Fishing_Minigame">Learn More <i class="fa-solid fa-arrow-up-right-from-square"></i> </a>
+                        <div class="Project-Text">
+                            <h2>Sonic Fishing Minigame</h2>
+                            <h3>A recreation of the Fishing Minigame inside Sonic Frontiers</h3>
+                            <img class="icons" src="icons/unity.png" alt="unity" />
+                            <img class="icons" src="icons/csharp.png" alt="Csharp"/>
+                            <a class="More" href="https://github.com/yoshiappel/Unity_Sonic_Fishing_Minigame">
+                                Learn More <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="Project-Box-2">
+                <div class="Project-Box" style="background-image: url(/img/Gettexttranslator.png);">
                     <div class="Project-Info">
-                        <div id="Project-Text">
-                            <h2>GetText-Translator<br> <h3>A simple translation website using Flask and Gettext</h3></h2>
-                            <img id="icons" src="icons/python.png" alt="python" />
-                            <a id="More" href="https://github.com/yoshiappel/GetText-Translator">Learn More <i class="fa-solid fa-arrow-up-right-from-square"></i> </a>
+                        <div class="Project-Text">
+                            <h2>GetText-Translator</h2>
+                            <h3>A simple translation website using Flask and Gettext</h3>
+                            <img class="icons" src="icons/python.png" alt="python" />
+                            <a class="More" href="https://github.com/yoshiappel/GetText-Translator">
+                                Learn More <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -123,12 +126,13 @@
     </main>
 
     <footer>
-        <p>Developed by Pieter Hendrik Boterhoek ©2025</p><p>Inspired by Cyberpunk 2077</p>
+        <p>Developed by Pieter Hendrik Boterhoek ©2025</p><p>Inspired by Cyberpunk 2077</p><a href="#" id="theme-toggle">Switch Theme</a>
     </footer>
 
     <button onclick="backToTop()" id="topButton" title="Go To Top"> <i class="fa-solid fa-arrow-up fa-2x"></i></button>
 
     <script type="module" src="src/weather-terminal.js"></script>
+    <script type="module" src="src/theme-switcher.js"></script>
     <script src="https://kit.fontawesome.com/5d1113f755.js" crossorigin="anonymous"></script>
 </body>
 <script>

@@ -2,6 +2,18 @@
     transition: transform 0.5s ease;
 }
 
+footer a {
+    color: #55ead4;
+    text-decoration: none;
+}
+
+footer a:hover {
+    border: 1px solid #c5003c;
+    box-shadow: 0 0 10px 0px #880425;
+    border-radius: 0px 10px 0px 10px;
+    padding: 3px;
+}
+
 footer p:hover {
     transform: translateX(42px);
 }
