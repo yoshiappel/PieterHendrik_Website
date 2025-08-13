@@ -7,7 +7,7 @@ html {
 }
 
 body {
-    background-color: #111;
+    background-color: #4c4c4c;
     margin: 0;
     padding: 0;
     font-family: 'Share Tech Mono', monospace;
@@ -300,17 +300,7 @@ footer {
 
 @media screen and (min-width: 800px) {
     .tools-carousell {
-        margin-top: 0px;
-        overflow: hidden;
-        white-space: nowrap;
-        background-color: #00000000;
-        opacity: 1;
-        padding: 20px 0;
         max-width: 800px;
-        background-image: url('/svg/code-solid-full.svg');
-        background-size: 2px;
-        border: 1px #c5003c solid;
-        box-shadow: 0 0 10px 0px #880425;
     }
     .Project-Box {
         min-width: 700px;
@@ -371,17 +361,7 @@ footer {
 
 @media screen and (min-width: 500px) and (max-width: 800px) {
     .tools-carousell {
-        margin-top: 0px;
-        overflow: hidden;
-        white-space: nowrap;
-        background-color: #00000000;
-        opacity: 1;
-        padding: 20px 0;
         max-width: 480px;
-        background-image: url('/svg/code-solid-full.svg');
-        background-size: 2px;
-        border: 1px #c5003c solid;
-        box-shadow: 0 0 10px 0px #880425;
     }
     .Project-Box {
         min-width: 400px;
