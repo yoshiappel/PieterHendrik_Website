@@ -20,10 +20,27 @@
     <title>Pieter Hendrik</title>
 </head>
 <style>
-    body {
+    html {
         visibility: hidden;
     }
 </style>
+<script>
+    (function() {
+        const Themes = ['cyberpunkred', 'cyberpunkyellow'];
+        const theme = localStorage.getItem('theme') || 'cyberpunkred';
+
+        Themes.forEach(t => {
+        const link = document.getElementById(t);
+        if (link) {
+            link.disabled = t !== theme;
+        }
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+        document.documentElement.style.visibility = 'visible';
+        });
+    })();
+</script>
 <body>
     <header>
         <nav>
