@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // check if the <a> component has been clicked // currently the <a> has been removed, you can now use the terminal to switch themes
-toggleLink.addEventListener('click', (e) => {
-  e.preventDefault();
-  switchTheme(); // switch the theme
-});
+//toggleLink.addEventListener('click', (e) => {
+  //e.preventDefault();
+  //switchTheme(); // switch the theme
+//});
