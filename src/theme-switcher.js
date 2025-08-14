@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.body.style.visibility = 'visible'; // show page only after theme is applied
 });
 
-// check if the <a> component has been clicked
+// check if the <a> component has been clicked // currently the <a> has been removed, you can now use the terminal to switch themes
 toggleLink.addEventListener('click', (e) => {
   e.preventDefault();
   switchTheme(); // switch the theme

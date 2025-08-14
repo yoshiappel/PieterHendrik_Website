@@ -38,7 +38,9 @@ fetch(url)
 function generateAdvice(temp, summary) {
     if (summary.toLowerCase().includes('rain')) return 'Rain detected. Deploy nano-coat.';
     if (temp > 30) return 'Heatwave alert. Initiate hydration protocol.';
-    if (temp < 10) return 'Cold front inbound. Equip thermal modules.';
+    if (temp >= 25 && temp <= 29) return 'Chance to get sunburn. Adviced to use sunscreen'
+    if (temp < 10) return 'Cold weather inbound. Equip thermal modules.';
+    if (temp < 0) return 'Better stay inside gonk!'
     return 'Conditions stable. Your good Choom.';
 }
 

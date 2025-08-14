@@ -11,8 +11,16 @@ const Themes = ['cyberpunkred', 'cyberpunkyellow'];
 const commands = {
     name: "Pieter Hendrik",
     age: "17",
-    help: "Available commands: name, age, rain on/off, theme red/yellow, github, clear, help",
+    location: "The Netherlands",
+    funfact: "I like C#",
+    favgame: "Terraria",
+    favsong: "Money for nothing.",
+    favanimal: "Cat",
+    yoshi: "meow",
+    bestgame: "Colacrash",
+    help: "Available commands: name, age, location, rain on/off, theme red/yellow, funfact, github, clear, help.\nFor more commands visit the repository or type 'repo'",
     github: "Opening GitHub... https://github.com/yoshiappel",
+    repo: "Opening repository... https://github.com/yoshiappel/PieterHendrik_Website"
 };
 
 function applyTheme(themeName) {
@@ -65,7 +73,9 @@ form.addEventListener('submit', (e) => {
     } else if (commands[command]) { // if the command is one of the defined commands, then print that to the terminal
         output.innerHTML += commands[command] + '\n'; 
         if (command === 'github') { // then if the command is github open a new window to the github
-        window.open('https://github.com/yoshiappel', '_blank');
+            window.open('https://github.com/yoshiappel', '_blank');
+        } else if (command === 'repo') {
+            window.open('https://github.com/yoshiappel/PieterHendrik_Website', '_blank');
         }
     } else { // if the command is none of the above let the user know they can type help for a list
         output.innerHTML += `Unknown command: "${command}"\nType 'help' for a list of commands.\n`;

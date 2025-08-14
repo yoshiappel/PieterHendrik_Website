@@ -34,38 +34,37 @@ nav {
 }
     
 .nav-link{
+    background-color: #f3e600;
     font-family: 'Orbitron', sans-serif;;
     font-size: 25px;
     display: block;
-    color: #55ead4;
+    color: #000000;
     text-align: center;
     padding: 14px 18px;
     text-decoration: none;
     margin: 10px 10px 0px 0px;
+    border-radius: 0px 10px 0px 10px;
+    border: 1px solid #55ead4;
 }
     
 .nav-link:hover {
-    background-color: #000000;
-    border: 1px solid #c5003c;
-    box-shadow: 0 0 10px 0px #880425;
-    border-radius: 0px 10px 0px 10px;
-    color: #55ead4;
+    background-color: #f3e600;
+    color: #000000;
     transform: scale(1.05);
 }
 
 .weather-terminal-container {
-    color: #55ead4;
-    border: 2px solid #c5003c;
+    color: #000000;
     padding: 1rem;
     max-width: 500px;
     margin: auto;
-    background-color: rgba(0, 0, 0, 0.75);
-    border: 1px solid #c5003c;
-    box-shadow: 0 0 20px #880425;
+    background-color: #f3e600;
+    border: 1px solid #55ead4;
+    box-shadow: 0 0 20px #55ead4;
 }
 
 .weather-terminal-header {
-    border-bottom: 1px solid #c5003c;
+    border-bottom: 1px solid #000000;
     margin-bottom: 1rem;
 }
 
@@ -81,7 +80,7 @@ nav {
 }
 
 .loading {
-    color: #55ead4; ;
+    color: #000000; ;
     opacity: 0.6;
 }
 
@@ -100,22 +99,21 @@ nav {
 
 .socials:hover {
     cursor: pointer;
-    color: #c5003c;
-    filter: drop-shadow(0 0 4px #880425);
+    color: #f3e600;
 }
 
 .tools-carousell {
     margin-top: 0px;
     overflow: hidden;
     white-space: nowrap;
-    background-color: #00000000;
+    background-color: #f3e600;
     opacity: 1;
     padding: 20px 0;
     max-width: 360px;
     background-image: url('/assets/svg/code-solid-full.svg');
     background-size: 2px;
-    border: 1px #c5003c solid;
-    box-shadow: 0 0 10px 0px #880425;
+    border: 1px #55ead4 solid;
+    box-shadow: 0 0 10px 0px #55ead4;
 }
 
 .tools-track {
@@ -127,13 +125,12 @@ nav {
 .tools-track img {
     height: 45px;
     margin: 0 25px;
-    filter: drop-shadow(0 0 4px #55ead4);
+    filter: drop-shadow(0 0 4px #f3e600);
     transition: transform 0.3s;
 }
 
 .tools-track img:hover {
     transform: scale(1.2);
-    filter: drop-shadow(0 0 6px #55ead4);
 }
 
 @keyframes scroll-left {
@@ -175,8 +172,8 @@ main .Items-Container {
     color: #55ead4;
     background-repeat: no-repeat;
     border-radius: 10px;
-    border: 1px solid #c5003c;
-    box-shadow: 0 0 10px 0px #880425;
+    border: 1px solid #55ead4;
+    box-shadow: 0 0 10px 0px #55ead4;
 }
 
 .Project-Box:hover .Project-Info {
@@ -203,27 +200,17 @@ main .Items-Container {
 }
 
 .More {
-    border: 1px solid #c5003c;
-    box-shadow: 0 0 10px 0px #880425;
+    text-decoration: none;
+    border: 1px solid #55ead4;
+    box-shadow: 0 0 10px 0px #55ead4;
     border-radius: 0px 10px 0px 10px;
-    background-color: #000000;   
-    color: #55ead4;
+    background-color: #f3e600;   
+    color: #000;
     font-size: 2vw;
     padding: 5px;
     top: 10px;
     right: 10px;
     position: absolute;
-}
-
-.More:hover {
-    cursor: default;
-    background-color: #000000;   
-    color: #55ead4;
-    transform: scale(1.05);
-    cursor: pointer;
-    border: 1px solid #c5003c;
-    box-shadow: 0 0 10px 0px #880425;
-    border-radius: 0px 10px 0px 10px;
 }
 
 .icons {
@@ -256,13 +243,13 @@ main .Items-Container {
     max-width: 875px;
 }
 
-#SomeText:hover {
+.SomeText:hover {
     cursor: default;
 }
 
 footer {
     position: absolute;
-    border-top: 3px solid #c5003c;
+    border-top: 3px solid #55ead4;
     color: #55ead4;
     text-align: center;
     min-width: 350px;
@@ -304,10 +291,10 @@ footer {
     left: 20px;
     width: 300px;
     max-height: 300px;
-    background-color: #0a0a0a;
-    border: 1px solid #c5003c;
-    box-shadow: 0 0 10px 0px #880425;
-    color: #55ead4;
+    background-color: #f3e600;
+    border: 1px solid #55ead4;
+    box-shadow: 0 0 10px 0px #55ead4;
+    color: #000000;
     padding: 10px;
     overflow-y: auto;
     z-index: 1000;
@@ -329,7 +316,7 @@ footer {
 #terminal-input {
     background: none;
     border: none;
-    color: #55ead4;
+    color: #000000;
     outline: none;
     flex-grow: 1;
     font-family: inherit;
@@ -342,15 +329,19 @@ footer {
     right: 20px;
     padding: 10px 15px;
     font-family: 'Courier New', monospace;
-    background-color: #111;
-    color: #55ead4;
-    border: 1px solid #c5003c;
-    box-shadow: 0 0 10px 0px #880425;
+    background-color: #f3e600;
+    color: #000000;
+    border: 1px solid #55ead4;
+    box-shadow: 0 0 10px 0px #55ead4;
     cursor: pointer;
     z-index: 1001;
 }
 
 @media screen and (min-width: 800px) {
+    .nav-link{
+        background-color: #000000;
+        color: #55ead4;
+    }
     .tools-carousell {
         max-width: 800px;
     }
@@ -388,20 +379,19 @@ footer {
         top: 20px;
         right: 10px;
         position: absolute;
+        border: 1px solid #55ead4;
+        box-shadow: 0 0 10px 0px #55ead4;
     }
-
     .More:hover {
         cursor: default;
-        background-color: #000000;   
-        color: #55ead4;
+        background-color: #f3e600;   
+        color: #000000;
         transform: scale(1.05);
         cursor: pointer;
-        border: 1px solid #c5003c;
-        box-shadow: 0 0 10px 0px #880425;
     }
     footer {
         position: absolute;
-        border-top: 3px solid #c5003c;
+        border-top: 3px solid #55ead4;
         color: #55ead4;
         text-align: center;
         min-width: 650px;
@@ -420,7 +410,7 @@ footer {
     }
     footer {
         position: absolute;
-        border-top: 3px solid #c5003c;
+        border-top: 3px solid #55ead4;
         color: #55ead4;
         text-align: center;
         min-width: 450px;
