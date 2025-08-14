@@ -41,12 +41,7 @@
             </div>
             <section id="weather-section" class="weather-terminal-container">
                 <div class="weather-terminal-header">
-                    <span class="weather-terminal-title">[WEATHER_TERMINAL]</span>
-                    <span>[RAIN?]</span>
-                    <label class="switch">
-                        <input id="rain-toggle" type="checkbox" autocomplete="off">
-                        <span class="slider"></span>
-                    </label>
+                    <span class="weather-terminal-title">[NEURO-WEATHER_TERMINAL]</span>
                 </div>
                 <div id="weather-output" class="weather-terminal-body">
                     <p class="loading">Decrypting sattelite feed...</p>
@@ -128,6 +123,18 @@
                     </div>
                 </div>
             </section>
+            <section>
+                <button id="open-terminal">
+                    <i class="fas fa-terminal" id="terminal-icon"></i>
+                </button>
+                <div id="terminal" class="terminal hidden">
+                    <div class="terminal-output" id="terminal-output"></div>
+                    <form id="terminal-form">
+                        <span class="prompt">></span>
+                        <input type="text" id="terminal-input" autocomplete="off" autofocus />
+                    </form>
+                </div>
+            </section>
         </div>
     </main>
 
@@ -139,6 +146,7 @@
 
     <script type="module" src="src/weather-terminal.js"></script>
     <script type="module" src="src/theme-switcher.js"></script>
+    <script type="module" src="src/cmd-terminal.js"></script>
     <script src="https://kit.fontawesome.com/5d1113f755.js" crossorigin="anonymous"></script>
 </body>
 <script>

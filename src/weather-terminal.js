@@ -76,14 +76,14 @@ function rainEffect() {
 let rainInterval = null;
 
 // start the rain effect
-function startRain() {
+window.startRain = function() {
     if (rainInterval) return;
 
     rainInterval = setInterval(rainEffect, 15);
 }
 
 // stop the rain effect
-function stopRain() {
+window.stopRain = function() {
     clearInterval(rainInterval);
     rainInterval = null;
 
@@ -92,18 +92,3 @@ function stopRain() {
         setTimeout(() => drop.remove(), 500);
     });
 }
-
-// rain toggle for rain effect even when its not raining irl
-document.addEventListener('DOMContentLoaded', () => {
-    const rainToggle = document.getElementById('rain-toggle');
-
-    if (rainToggle) {
-        rainToggle.addEventListener('change', (e) => {
-            if (e.target.checked) { 
-                startRain();
-            } else {
-                stopRain();
-            }
-        });
-    }
-});

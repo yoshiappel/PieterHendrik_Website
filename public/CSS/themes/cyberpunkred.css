@@ -91,10 +91,6 @@ nav {
     100% { opacity: 1; }
 }
 
-#rain-toggle {
-    accent-color: #55ead4;
-}
-
 .about-me-container {
     align-items: center;
     text-align: center;
@@ -281,7 +277,7 @@ footer {
     transition: transform 0.3s ease;
     display: none;
     position: fixed;
-    bottom: 30px;
+    top: 30px;
     right: 20px;
     z-index: 99;
     border: none;
@@ -296,6 +292,62 @@ footer {
 
 #topButton:hover {
     transform: scale(1.10);
+}
+
+.hidden {
+    display: none;
+}
+
+#terminal {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 300px;
+    max-height: 300px;
+    background-color: #0a0a0a;
+    border: 1px solid #c5003c;
+    box-shadow: 0 0 10px 0px #880425;
+    color: #55ead4;
+    padding: 10px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.terminal-output {
+    white-space: pre-wrap;
+    margin-bottom: 8px;
+}
+
+#terminal-form {
+    display: flex;
+}
+
+.prompt {
+    margin-right: 5px;
+}
+
+#terminal-input {
+    background: none;
+    border: none;
+    color: #55ead4;
+    outline: none;
+    flex-grow: 1;
+    font-family: inherit;
+    font-size: 1em;
+}
+
+#open-terminal {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    font-family: 'Courier New', monospace;
+    background-color: #111;
+    color: #55ead4;
+    border: 1px solid #c5003c;
+    box-shadow: 0 0 10px 0px #880425;
+    cursor: pointer;
+    z-index: 1001;
 }
 
 @media screen and (min-width: 800px) {
