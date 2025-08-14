@@ -1,32 +1,38 @@
-const themeLink = document.getElementById('theme-style'); // css link
-const toggleLink = document.getElementById('theme-toggle'); // <a> to switch theme
+const toggleLink = document.getElementById('theme-toggle'); // the css links in html head
 
-// list all the themes
-const Themes = ['cyberpunkred', 'cyberpunkyellow']
+const Themes = ['cyberpunkred', 'cyberpunkyellow']; // all the available themes to switch trough
 
-// get the current loaded theme
+// check the current selected theme
 function getCurrentTheme() {
-  const href = themeLink.getAttribute('href')
-  return href.includes('cyberpunkred') ? 'recyberpunkred' : 'cyberpunkyellow'; // if href includes "cyberpunkred" the return "cyberpunkred" else return "cyberpunkyellow"
+  return localStorage.getItem('theme') || 'cyberpunkred'; // check if there is a theme saved in localstorage else return the default "cyberpunkred"
 }
 
-// switch the current theme to the next
-function toggleTheme() {
-  const currentTheme = getCurrentTheme(); // first get the current theme to avoid loading the same theme again
-  const nextTheme = currentTheme === 'cyberpunkyellow' ? 'cyberpunkred' : 'cyberpunkyellow'; // if the currenTheme is "cyberpunkyellow" switch to "cyberpunkred"
-  themeLink.setAttribute('href', `/CSS/themes/${nextTheme}.css`) // now set the href to the right css script
-  localStorage.setItem('theme', nextTheme) // save this preference in localstorage
+// apply the selected theme
+function applyTheme(theme) {
+  Themes.forEach(t => { // loop through all themes
+    const link = document.getElementById(t); // find the corresponding <link> element for each theme
+    if (link) { // make sure the <link> actually exist before continuing 
+      link.disabled = t !== theme; // enable only the selected theme
+    }
+  });
 }
 
-// load the saved preference if it exist on page load
+// switch the theme 
+function switchTheme() {
+  const currentTheme = getCurrentTheme(); // get the current theme
+  const nextTheme = currentTheme === 'cyberpunkyellow' ? 'cyberpunkred' : 'cyberpunkyellow'; // if currentTheme is cyberpunkyellow the select cyberpunkred else select cyberpunkyellow and set nextTheme to this value
+  applyTheme(nextTheme); // apply the right theme
+  localStorage.setItem('theme', nextTheme); // save the selected theme in localstorage 
+}
+
+// on page load, apply the theme by giving the value of getCurrentTheme to applyTheme
 document.addEventListener('DOMContentLoaded', () => {
-  const saved = localStorage.getItem('theme') || 'cyberpunkred';
-  themeLink.setAttribute('href', `/CSS/themes/${saved}.css`);
+  applyTheme(getCurrentTheme());
+  document.body.style.visibility = 'visible'; // show page only after theme is applied
 });
 
-// if the user click on the <a>
+// check if the <a> component has been clicked
 toggleLink.addEventListener('click', (e) => {
-  e.preventDefault(); 
-  toggleTheme(); // switch theme
+  e.preventDefault();
+  switchTheme(); // switch the theme
 });
-

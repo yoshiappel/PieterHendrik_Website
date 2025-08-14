@@ -1,4 +1,4 @@
-const API_KEY = import.meta.env.VITE_API_KEY;
+const API_KEY = import.meta.env.VITE_API_KEY; // get the api key from the dotenv file
 
 const container = document.querySelector('body');
 const output = document.getElementById('weather-output');
@@ -27,13 +27,14 @@ fetch(url)
         } else {
             stopRain();
         }
-    })
+    }) // show if something went wrong
     .catch(err => {
         output.innerHTML = `<p class="error">ERROR: Failed to connect to orbital weather satellite.</p>`;
         console.error(err);
     });
 }
 
+// generate advice on different conditions
 function generateAdvice(temp, summary) {
     if (summary.toLowerCase().includes('rain')) return 'Rain detected. Deploy nano-coat.';
     if (temp > 30) return 'Heatwave alert. Initiate hydration protocol.';
@@ -49,17 +50,18 @@ function initWeather() {
             const lon = pos.coords.longitude;
             fetchWeather(lat, lon);
         },
-        err => {
+        err => { // let the user know if the blocked the request by turning of location
             output.innerHTML = `<p class="error">ERROR: Geolocation blocked. Cannot retrieve coordinates.</p>`;
         }
         );
-    } else {
+    } else { // let the user also know if this function doesnt work on their device
         output.innerHTML = `<p class="error">ERROR: Geolocation unsupported on this system.</p>`;
     }
 }
 
 window.addEventListener('DOMContentLoaded', initWeather);
 
+// add a rainEffect if its raining IRL or if the button has been selected
 function rainEffect() {
     let rainDrops = document.createElement('span');
     rainDrops.classList.add('rain-drops');
@@ -73,12 +75,14 @@ function rainEffect() {
 
 let rainInterval = null;
 
+// start the rain effect
 function startRain() {
     if (rainInterval) return;
 
     rainInterval = setInterval(rainEffect, 15);
 }
 
+// stop the rain effect
 function stopRain() {
     clearInterval(rainInterval);
     rainInterval = null;
@@ -95,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (rainToggle) {
         rainToggle.addEventListener('change', (e) => {
-            if (e.target.checked) {
+            if (e.target.checked) { 
                 startRain();
             } else {
                 stopRain();
