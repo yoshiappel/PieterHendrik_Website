@@ -56,6 +56,8 @@ form.addEventListener('submit', (e) => {
     // do extra things if the command is a specific one:
     if (command === 'clear') { // if the command is clear then clear the entire terminal
         output.innerHTML = ''; 
+    } else if (command === 'theme' || command === 'theme red/yellow') {
+        output.innerHTML += `Want to change the theme? Use 'theme yellow' or 'theme red'`;
     } else if (command === 'theme red') {
         const selectedTheme = 'cyberpunkred'
         applyTheme(selectedTheme);
@@ -64,6 +66,8 @@ form.addEventListener('submit', (e) => {
         const selectedTheme = 'cyberpunkyellow'
         applyTheme(selectedTheme);
         output.innerHTML += `Theme changed to: ${selectedTheme}\n`;
+    } else if (command === 'rain' || command === 'rain on/off') {
+        output.innerHTML += `Want to turn the rain on/off? Use 'rain on' or 'rain off'`;
     } else if (command === 'rain on') { // toggle the rain on 
         window.startRain();
         output.innerHTML += `Rain enabled\n`;
